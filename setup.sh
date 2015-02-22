@@ -19,13 +19,12 @@ cd ~
 echo 'export GOROOT=$HOME/local/go' >> $HOME/.bashrc
 echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
 echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> $HOME/.bashrc
-source $HOME/.bashrc
 # Install gopm
-go get -u github.com/gpmgo/gopm
+$HOME/local/go/bin/go get -u github.com/gpmgo/gopm
 #Install gogs
 # Download and install dependencies
-go get -u github.com/gogits/gogs
+$HOME/local/go/bin/go get -u github.com/gogits/gogs
 # Build main program
-cd $GOPATH/src/github.com/gogits/gogs
+cd $HOME/go/src/github.com/gogits/gogs
 go build
 EOF
